@@ -1,0 +1,31 @@
+<div
+  class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mr-0 justify-content-center"
+>
+  <div *ngFor="let player of player" class="col my-4">
+    <div class="card {{ player.role[0] }} mx-4 boxshadow">
+      <img src="{{ player.imgHero }}" class="card-img-top" alt="..." />
+      <div class="card-body cardtexto">
+        <h5 class="card-title">
+          {{ player.nick | uppercase }}
+          <img src="{{ player.role[1] }}" class="img-fluid iconimage" />
+        </h5>
+        <ul class="jogador" style="padding: 0px; margin: 0px">
+          <li>
+            <a class="px-2" href="{{ player.instagram }}">
+              <img
+                src="assets/images/Icons/instagram-card.svg"
+                class="iconimage"
+              />
+              {{ player.name }}
+            </a>
+          </li>
+          <li>
+            <img src="assets/images/Icons/joystick.svg" class="iconcontrol" />
+            {{ player.date }}
+          </li>
+          <li>{{ player.city }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

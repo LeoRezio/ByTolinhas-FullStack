@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+.p32 {
+  padding: 80px 0px;
+}
+.titulo1 {
+  text-align: center;
+  color: #d99e30;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.titulo2 {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.paragrafo-e {
+  text-indent: 50px;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #918a8b;
+}
+.paragrafo-c {
+  text-align: center;
+  font-weight: 600;
+}
+p {
+  color: #313131;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+#banner {
+  background-image: url('assets/images/banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 76px);
+}
+.nav-item.nav-link,
+.navbar-brand {
+  color: #fdf37d;
+}
+.topbar {
+  z-index: 999;
+  background: linear-gradient(to right, #33cccc 25%, #ff66cc 65%);
+  box-shadow: -4px 4px 8px rgba(60, 60, 60, 0.35);
+}
+h5.card-title {
+  font-weight: bold;
+}
+.boxshadow {
+  transition: 0.2s;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.btn-boxshadow {
+  box-shadow: 0 0.5rem 1rem rgba(68, 68, 68, 0.15);
+  transition: 0.4s;
+}
+.btn-boxshadow:hover {
+  box-shadow: 0px 8px 8px rgba(68, 68, 68, 0.4);
+  transition-property: box-shadow;
+  transition-duration: 0.4s;
+  position: relative;
+}
+.boxshadow:hover {
+  box-shadow: 0px 12px 8px rgba(68, 68, 68, 0.4);
+  transition-property: box-shadow;
+  transition-duration: 0.4s;
+  position: relative;
+}
+.cardtexto {
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.5;
+}
+.cardtank {
+  border-color: #33cccc;
+  border-width: 4px;
+}
+.cardsup {
+  border-color: #ff66cc;
+  border-width: 4px;
+}
+.carddps {
+  border-color: #fdf37d;
+  border-width: 4px;
+}
+.cardcoach {
+  border-color: #62d076;
+  border-width: 4px;
+}
+.cardflex1 {
+  border-color: linear-gradient(to bottom right, #33cccc 35%, #ff66cc 70%);
+  border-width: 4px;
+}
+.cardflex2 {
+  border-color: linear-gradient(
+    to right bottom,
+    #33cccc,
+    #4cd8c0,
+    #70e2af,
+    #98ea9c,
+    #c2f08b,
+    #d8e579,
+    #edd86d,
+    #ffcb69,
+    #ffac69,
+    #ff8c7f,
+    #ff70a2,
+    #ff66cc
+  );
+  border-width: 4px;
+}
+.border-gradient {
+  border: 4px solid;
+  border-image-slice: 1;
+}
+.border-gradient-buttom {
+  border: 1px solid;
+  border-image-slice: 1;
+}
+.borderflex1 {
+  border-image-source: linear-gradient(to bottom right, #33cccc, #ff66cc);
+}
+.borderflex2 {
+  border-image-source: linear-gradient(
+    to right bottom,
+    #33cccc,
+    #edd86d,
+    #ff66cc
+  );
+}
+.borderflex3 {
+  border-image-source: linear-gradient(to bottom right, #ff66cc, #62d076);
+}
+.borderbuttom {
+  border-image-source: linear-gradient(
+    to right bottom,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+}
+.carddata {
+  font-weight: bold;
+  text-align: center;
+  font-size: medium;
+  margin: 0px;
+}
+.cardtipo {
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #918a8b;
+  font-style: italic;
+  margin: 0px;
+}
+.imgtext {
+  text-align: center;
+}
+.btncalendario {
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+}
+.bannerInicio {
+  width: 100%;
+  height: 100vh;
+}
+.espaco {
+  width: 100%;
+  height: 76px;
+}
+.iconcontrol {
+  width: 1.3rem;
+  margin-top: -4px;
+}
+.iconimage {
+  width: 1.5rem;
+  margin-top: -4px;
+}
+.camp-logo {
+  width: 10rem;
+  height: 10rem;
+  padding: 0px;
+}
+.texto-conq {
+  font-weight: bold;
+  color: #918a8b;
+  font-size: large;
+}
+.controlsize {
+  height: 3rem;
+  position: absolute;
+  width: 2rem;
+  cursor: pointer;
+}
+.btn-prev {
+  background: url(assets/images/Icons/left-and-right.png) no-repeat scroll 0px -8px;
+  left: 0px;
+}
+.btn-next {
+  background: url(assets/images/Icons/left-and-right.png) no-repeat scroll -32px -8px;
+  right: 0px;
+}
+#tagqs,
+#tagjog,
+#tagcal,
+#tagcon {
+  color: rgba(255, 255, 255, 0.7);
+}
+#tagqs:hover,
+#tagjog:hover,
+#tagcal:hover,
+#tagcon:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.jogador {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  color: #918a8b;
+}
+.versus {
+  font-style: italic;
+  font-weight: 400;
+}
+.rodape {
+  background-color: #272a2b;
+}
+.socialicon {
+  width: 3rem;
+}
