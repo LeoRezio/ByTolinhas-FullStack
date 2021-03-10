@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Request, Response, Router } from "express";
 import Conq from "./models/Conq";
 import Game from "./models/Games";
 import Player from "./models/Players";
@@ -6,15 +6,17 @@ import Player from "./models/Players";
 const router = Router();
 
 router.get("/", async (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const games = await Game.find({});
   const players = await Player.find({});
   const conqs = await Conq.find({});
   res.status(200).json({ games, players, conqs });
 });
 
-router.get("/player", async (req, res) => {
+router.get("/player", async (request: Request, response: Response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*");
   const players = await Player.find({});
-  res.status(200).json({ players });
+  response.status(200).json(players);
 });
 
 router.post("/player", async (req, res) => {
@@ -25,7 +27,7 @@ router.post("/player", async (req, res) => {
 
 router.get("/game", async (req, res) => {
   const games = await Game.find({});
-  res.status(200).json({ games });
+  res.status(200).json(games);
 });
 
 router.post("/game", async (req, res) => {
@@ -36,7 +38,7 @@ router.post("/game", async (req, res) => {
 
 router.get("/conq", async (req, res) => {
   const conqs = await Conq.find({});
-  res.status(201).json({ conqs });
+  res.status(201).json(conqs);
 });
 
 router.post("/conq", async (req, res) => {

@@ -26,7 +26,7 @@
     "mongoose": "^5.11.18",
     "ngx-owl-carousel-o": "^5.0.0",
     "nodemon": "^2.0.7",
-    "rxjs": "~6.6.0",
+    "rxjs": "^6.6.6",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },

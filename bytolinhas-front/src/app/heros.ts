@@ -2,7 +2,6 @@ import { Player } from './shared/player.model';
 //import { player } from './type-hero';
 export const players: Player[] = [
   new Player(
-    1,
     '../assets/images/images-card/zarya-wallpaper.png',
     'Leonardo Rezio',
     'LEOREZIO',
@@ -12,7 +11,6 @@ export const players: Player[] = [
     'Brasília/DF'
   ),
   new Player(
-    2,
     '../assets/images/images-card/mercy-wallpaper.png',
     'Leandro Ferreira',
     'lehboss',
@@ -22,7 +20,6 @@ export const players: Player[] = [
     'São Paulo/SP'
   ),
   new Player(
-    3,
     '../assets/images/images-card/mccree-wallpaper.jpg',
     'Daniel Sette',
     'settedan',
@@ -32,7 +29,6 @@ export const players: Player[] = [
     'São Paulo/SP'
   ),
   new Player(
-    4,
     '../assets/images/images-card/Ashe-wallpaper.jpg',
     'Paulo Ricardo',
     'Vociferatus',

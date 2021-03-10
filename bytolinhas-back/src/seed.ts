@@ -21,9 +21,9 @@ async function seed() {
 
   // 4. Pass data to initialize db where key is model, and value is list of documents
   await seeder.populateModels({
-    modelgame: games,
-    modelplayer: players,
-    modelconq: conqs,
+    Game: games,
+    Player: players,
+    Conq: conqs,
   });
 
   await seeder.disconnect();

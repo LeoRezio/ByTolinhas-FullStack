@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface IPlayer extends Document {
-  id: number;
   imgHero: string;
   name: string;
   nick: string;
@@ -12,7 +11,6 @@ export interface IPlayer extends Document {
 }
 
 const playerSchema = new mongoose.Schema({
-  id: Number,
   imgHero: String,
   name: String,
   nick: String,

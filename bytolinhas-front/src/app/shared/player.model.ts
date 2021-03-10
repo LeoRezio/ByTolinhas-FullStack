@@ -1,6 +1,6 @@
 export class Player {
   constructor(
-    public id: number,
+    public _id: string,
     public imgHero: string,
     public name: string,
     public nick: string,
