@@ -5,12 +5,12 @@ import Player from "./models/Players";
 
 const router = Router();
 
-router.get("/", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+router.get("/", async (request: Request, response: Response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*");
   const games = await Game.find({});
   const players = await Player.find({});
   const conqs = await Conq.find({});
-  res.status(200).json({ games, players, conqs });
+  response.status(200).json({ games, players, conqs });
 });
 
 router.get("/player", async (request: Request, response: Response) => {
@@ -19,32 +19,34 @@ router.get("/player", async (request: Request, response: Response) => {
   response.status(200).json(players);
 });
 
-router.post("/player", async (req, res) => {
-  const newPlayer = new Player(req.body);
+router.post("/player", async (request: Request, response: Response) => {
+  const newPlayer = new Player(request.body);
   await newPlayer.save();
-  res.status(201).json(newPlayer);
+  response.status(201).json(newPlayer);
 });
 
-router.get("/game", async (req, res) => {
+router.get("/game", async (request: Request, response: Response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*");
   const games = await Game.find({});
-  res.status(200).json(games);
+  response.status(200).json(games);
 });
 
-router.post("/game", async (req, res) => {
-  const newGame = new Game(req.body);
+router.post("/game", async (request: Request, response: Response) => {
+  const newGame = new Game(request.body);
   await newGame.save();
-  res.status(201).json(newGame);
+  response.status(201).json(newGame);
 });
 
-router.get("/conq", async (req, res) => {
+router.get("/conq", async (request: Request, response: Response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*");
   const conqs = await Conq.find({});
-  res.status(201).json(conqs);
+  response.status(201).json(conqs);
 });
 
-router.post("/conq", async (req, res) => {
-  const newConq = new Conq(req.body);
+router.post("/conq", async (request: Request, response: Response) => {
+  const newConq = new Conq(request.body);
   await newConq.save();
-  res.status(201).json(newConq);
+  response.status(201).json(newConq);
 });
 
 export { router };

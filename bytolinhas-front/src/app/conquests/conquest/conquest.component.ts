@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { conquests } from 'src/app/conquests';
+import { Conquest } from 'src/app/shared/conquest.models';
+import { ConquestService } from './conquest.service';
 
 @Component({
   selector: 'app-conquest',
@@ -7,8 +8,11 @@ import { conquests } from 'src/app/conquests';
   styleUrls: ['./conquest.component.css']
 })
 export class ConquestComponent implements OnInit {
-  conquests = conquests;
-  constructor() {}
-
-  ngOnInit(): void {}
+  conquest: Conquest[];
+  constructor(private conquestservice: ConquestService) {}
+  ngOnInit(): void {
+    this.conquestservice.getConquest().subscribe((conq) => {
+      this.conquest = conq;
+    });
+  }
 }

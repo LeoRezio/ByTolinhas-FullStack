@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { games } from 'src/app/games';
+import { Game } from 'src/app/shared/game.models';
+import { GameService } from './game.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
+  providers: [GameService],
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  games = games;
-  constructor() {}
+  game: Game[];
+  constructor(private gameservice: GameService) {}
   customOptions: OwlOptions = {
     items: 3,
     center: true,
@@ -30,5 +32,9 @@ export class GameComponent implements OnInit {
       }
     }
   };
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.gameservice.getGames().subscribe((game) => {
+      this.game = game;
+    });
+  }
 }
